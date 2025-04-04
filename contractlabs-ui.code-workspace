@@ -1,0 +1,28 @@
+{
+    "folders": [
+      {
+        "path": "./"
+      }
+    ],
+    "settings": {
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"editor.rulers": [120],
+		"editor.wordWrap": "wordWrapColumn",
+		"editor.wrappingIndent": "same",
+		"editor.wordWrapColumn": 120,
+		"editor.formatOnSave": true,
+	},
+    "extensions": {
+      "recommendations": [
+        "styled-components.vscode-styled-components",
+        "vitest.explorer",
+        "stylelint.vscode-stylelint",
+        "SonarSource.sonarlint-vscode",
+        "stkb.rewrap",
+        "rvest.vs-code-prettier-eslint",
+        "dbaeumer.vscode-eslint",
+        "naumovs.color-highlight"
+      ]
+    }
+  }
+  
