@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/francopan-contractlabs/contractlabs-ui.git"
+    "url": "git+https://github.com/ContractFlow/contractlabs-ui.git"
   },
   "keywords": [
     "ui",
@@ -24,9 +24,9 @@
   "author": "ContractLabs",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/francopan-contractlabs/contractlabs-ui/issues"
+    "url": "https://github.com/ContractFlow/contractlabs-ui/issues"
   },
-  "homepage": "https://github.com/francopan-contractlabs/contractlabs-ui#readme",
+  "homepage": "https://github.com/ContractFlow/contractlabs-ui#readme",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",

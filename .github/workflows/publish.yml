@@ -1,0 +1,66 @@
+name: Publish to Github Packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Publish to GitHub Packages
+        run: npm publish --registry=https://npm.pkg.github.com/
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  # bump-version:
+  #   needs: publish
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+  #       with:
+  #         token: ${{ secrets.GITHUB_TOKEN }}
+
+  #     - name: Setup Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 18
+
+  #     - name: Install dependencies
+  #       run: npm ci
+
+  #     - name: Bump version
+  #       id: version
+  #       run: |
+  #         NEW_VERSION=$(npm version patch -m "chore: bump version to %s")
+  #         echo "new_version=$NEW_VERSION" >> $GITHUB_ENV
+  #         echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+  #       env:
+  #         GIT_AUTHOR_NAME: "github-actions[bot]"
+  #         GIT_AUTHOR_EMAIL: "github-actions[bot]@users.noreply.github.com"
+
+  #     - name: Push updated package.json & tag
+  #       run: |
+  #         git push origin main --tags
+  #       env:
+  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  
