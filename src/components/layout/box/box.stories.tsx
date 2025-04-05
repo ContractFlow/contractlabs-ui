@@ -7,7 +7,7 @@ export default {
   component: Box,
   parameters: {
     docs: {
-      docsPage: true, 
+      docsPage: true,
       description: {
         component:
           'The Box component is a generic, theme-aware container with access to CSS utilities from MUI System. It acts as a <div> with additional styling capabilities.',
@@ -20,7 +20,6 @@ export default {
     component: { control: 'text', description: 'Element type for the Box' },
   },
 } as Meta<typeof Box>;
-
 
 const Template: StoryFn<typeof Box> = (args: BoxProps) => <Box {...args} />;
 
@@ -40,14 +39,12 @@ CustomComponent.args = {
 export const WithSxProp = Template.bind({});
 WithSxProp.args = {
   sx: {
-    width: 100,
-    height: 100,
-    borderRadius: 1,
-    bgcolor: 'primary.main',
+    'width': 100,
+    'height': 100,
+    'borderRadius': 1,
+    'bgcolor': 'primary.main',
     '&:hover': {
       bgcolor: 'primary.dark',
     },
   },
 };
-
-

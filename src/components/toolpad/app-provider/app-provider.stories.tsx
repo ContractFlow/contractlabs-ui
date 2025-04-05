@@ -22,9 +22,12 @@ type Story = StoryObj<typeof AppProvider>;
 const NAVIGATION: Navigation = [
   { kind: 'header', title: 'Main items' },
   { segment: 'page', title: 'Page', icon: <DashboardIcon /> },
-  { segment: 'page', title: 'Page', icon: <DashboardIcon />, children: [
-    { segment: 'page', title: 'Page', icon: <DashboardIcon /> },
-  ] },
+  {
+    segment: 'page',
+    title: 'Page',
+    icon: <DashboardIcon />,
+    children: [{ segment: 'page', title: 'Page', icon: <DashboardIcon /> }],
+  },
   { segment: 'page-2', title: 'Page 2', icon: <TimelineIcon /> },
 ];
 
@@ -37,10 +40,7 @@ const CustomContent = () => (
 const lightTheme = createTheme({ palette: { mode: 'light' } });
 const darkTheme = createTheme({ palette: { mode: 'dark' } });
 
-
 export const Default: Story = {
-
-    
   render: () => (
     <AppProvider navigation={NAVIGATION} theme={lightTheme}>
       <DashboardLayout>
@@ -49,7 +49,6 @@ export const Default: Story = {
     </AppProvider>
   ),
 };
-
 
 export const WithDarkTheme: Story = {
   render: () => (

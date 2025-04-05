@@ -1,1 +1,1 @@
-export * from "./use-breakpoint/use-breakpoint.hook";
+export * from './use-breakpoint/use-breakpoint.hook';

@@ -1,12 +1,12 @@
-import Typography from "@mui/material/Typography";
-import { Meta, StoryObj } from "@storybook/react";
-import Container from ".";
+import Typography from '@mui/material/Typography';
+import { Meta, StoryObj } from '@storybook/react';
+import Container from '.';
 
 const meta: Meta<typeof Container> = {
-  title: "Components/Layout/Container",
+  title: 'Components/Layout/Container',
   component: Container,
   args: {
-    maxWidth: "sm",
+    maxWidth: 'sm',
     color: '#000',
     hidden: false,
 
