@@ -1,11 +1,17 @@
 {
   "name": "@ContractFlow/ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ContractLabs UI Library",
-  "main": "dist/index.js",
+  "main": "dist/contractlabs-ui.es.js",
   "types": "dist/index.d.ts",
-    "files": [
-      "dist"
+  "exports": {
+    ".": {
+      "import": "./dist/contractlabs-ui.es.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
   ],
   "scripts": {
     "dev": "vite",
@@ -72,6 +78,7 @@
     "prettier": "^3.5.3",
     "storybook": "^8.6.12",
     "vite": "^6.2.4",
+    "vite-plugin-dts": "^4.5.3",
     "vite-plugin-static-copy": "^2.3.0",
     "vitest": "^3.1.1"
   }

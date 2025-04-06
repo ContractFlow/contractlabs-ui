@@ -1,10 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
   plugins: [
     react(),
+    dts({
+      entryRoot: "src",
+      insertTypesEntry: true
+    }),
     viteStaticCopy({
       targets: [
         {
